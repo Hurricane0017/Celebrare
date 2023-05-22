@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+}
+.preloader{
+    z-index: 20;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    animation: preloader 1.5s ease-out;
+}
+.preview{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 2rem;
+    background-color: white;
+}
+.preview-top{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+.preview-top span{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.preview-top span p{
+    font-size: 1rem;
+    opacity: 0;
+}
+.info-txt{
+    transition: all 0.2s;
+}
+.preview-top span:hover .info-txt{
+    opacity: 1;
+}
+.fa-solid{
+    color: #000;
+    cursor: pointer;
+}
+#image-preview{
+    margin-top: 30vh;
+    max-width: 50%;
+}
+.left{
+    width: 20%;
+}
+.right{
+    width: 20%;
+}
+.centre{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+@keyframes preloader {
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: max-content;
+    padding-bottom: 5rem;
+}
+.top-bar{
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: -15vw;
+    padding-right: 15vw;
+    box-shadow: 0px 1px 10px 1px rgb(231, 230, 230);
+}
+.top-bar img{
+    width: 7.5rem;
+    cursor: pointer;
+}
+.upload-sec{
+    font-weight: 500;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 60vw;
+    height: 15rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(213, 213, 213);
+}
+.upload-sec label{
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(43, 125, 125);
+    color: white;
+    cursor: pointer;
+}
+.image{
+    margin-top: 5rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#image{
+    opacity: 0;
+    margin-top: 5rem;
+    max-width:30rem;
+}
